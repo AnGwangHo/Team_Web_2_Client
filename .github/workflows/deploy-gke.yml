@@ -31,5 +31,6 @@ jobs:
     # set .env value
     - name: set .env.* file
       run: |
-        sed -i "s#=#&${{ secrets.REACT_APP_SERVER }}#" .env.production
+        sed -i "1s#=#&${{ secrets.REACT_APP_SERVER }}#" .env.production
+        sed -i "2s#=#&${{ secrets.NAVER_MAP_KEY }}#" .env.production
         cat .env.production
