@@ -31,5 +31,5 @@ jobs:
     # set .env value
     - name: set .env.* file
       run: |
-        sed -i "s/REACT_APP_SERVER=/\${{ secrets.REACT_APP_SERVER }}/" .env.production
+        sed -i "s/REACT_APP_SERVER=/'${{ secrets.REACT_APP_SERVER }}'/" .env.production
         cat .env.production
