@@ -31,6 +31,5 @@ jobs:
     # set .env value
     - name: set .env.* file
       run: |
-        sed -i "1s/=/&aaaaaa/" .env.production
-        sed -i "2s/=/&$bbbbbb/" .env.production
+        sed -i "1s/=/&aaaaaa/" .env.production sed -i "2s/=/&$bbbbbb/" .env.production
         cat .env.production
